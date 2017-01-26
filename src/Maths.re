@@ -1,6 +1,7 @@
 /**
  * Here are some quick and simple mathematical functions
  */
+
 /** 
  * @pow
  * Small function to calculate pow of an integer.
@@ -9,7 +10,7 @@
  * @return a^b
 */
 let rec pow a b => {
-    (b == 0) ? 1 : a * pow a (b-1);
+    b == 0 ? 1 : a * pow a (b - 1);
 };
 
 /** 
