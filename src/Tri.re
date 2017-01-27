@@ -63,6 +63,43 @@ let rec tri_bulle acc comp => fun
   |[] => acc
   |[t, ...q]  => tri_bulle (insert t [] comp acc) comp q ;
 
+/**
+ * @name divise
+ * @ Fonction permettant de diviser une liste
+ * @param l 'a list Liste d'élément
+ * @return ('a list, 'a list) liste l divisée en 2.
+ */
+let rec divise a1 a2 => fun
+  |[]  => (a1, a2)
+  |[t, ...[]]  => ([t, ...a1], a2)
+  |[t1,t2, ...q]  => divise [t1, ...a1] [t2, ...a2] q;
+/**
+ * @name fusion
+ * @ Fonction permettant de fusionner une liste
+ * @param comp 'a ->'a ->bool fonction de comparaison
+ * @param l1 'a list Liste d'élément triée selon comp
+ * @param l2 'a list Liste d'élément triée selon comp
+ * @return 'a list Liste l1 &amp;&amp; l2 fusionnée et triée selon comp'
+*/
+let rec fusion acc comp => fun
+  |([], l2)  => List.append acc l2
+  |(l1 ,[])  => List.append acc l1
+  |([t1, ...q1], [t2, ...q2])  => comp t1 t2 ? fusion(List.append acc [t1]) comp  (q1,[t2, ...q2]) : fusion (List.append acc [t2]) comp  ([t1, ...q1],q2);
+/**
+ * @name order
+ * @ Fonction permettant de trier une liste
+ * @param comp 'a ->'a ->bool fonction de comparaison
+ * @param l 'a list Liste d'élément
+ * @return l trié
+*/
+let rec order comp => fun
+  |[]  => []
+  |[t, ...[]]  => [t]
+  |l  => {
+    let (l1,l2) = divise [] [] l; 
+    fusion [] comp ((order comp l1), (order comp l2))
+  };
+
 /** 
  * Tests
 */
@@ -80,9 +117,13 @@ printIntList (tri_bulle_nt lower ltrie);
 print_newline ();
 printIntList (tri_bulle [] lower ltrie);
 print_newline ();
+printIntList (order lower ltrie);
+print_newline ();
 printIntList (lntrie);
 print_newline ();
 printIntList (tri_bulle_nt lower lntrie);
 print_newline ();
 printIntList (tri_bulle [] lower lntrie);
+print_newline ();
+printIntList (order lower lntrie);
 print_newline ();
