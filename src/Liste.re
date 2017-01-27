@@ -1,4 +1,8 @@
 /**
+ * Small functions to discover list management
+ */
+
+/**
  * @name printList
  * @ Fonction affichant les éléments d'une liste 1 à 1 a  -> b  -> x  -> []
  * @param l string list Liste de chaînes de charactère à afficher
