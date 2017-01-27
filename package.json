@@ -34,9 +34,9 @@
   "scripts": {
     "postinstall": "npm run reasonBuild",
     "buildHelp": "eval $(dependencyEnv) && nopam && rebuild --help",
-    "reasonBuild": "eval $(dependencyEnv) && nopam && rebuild -use-ocamlfind -cflag -w -cflag -40 -I src ./src/Maths.native 2>&1 | berror.native --path-to-refmttype refmttype",
+    "reasonBuild": "eval $(dependencyEnv) && nopam && rebuild -use-ocamlfind -cflag -w -cflag -40 -I src ./src/Liste.native 2>&1 | berror.native --path-to-refmttype refmttype",
     "reasonbuild": "npm run reasonBuild",
-    "start": "eval $(dependencyEnv) && ./_build/src/Maths.native",
+    "start": "eval $(dependencyEnv) && ./_build/src/Liste.native",
     "clean": "rm -r ./_build",
     "top": "eval $(dependencyEnv) && rtop",
     "env": "eval $(dependencyEnv) && env",
