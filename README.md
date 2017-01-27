@@ -16,22 +16,22 @@ Npm start will run all of the code in source folder.
 
 All available npm scripts :
 
-| command | how to run  | what is it doing |
-| ------- | -- | -- |
-| postinstall | `npm run postinstall` | Automaticly runed after `npm install` to build all src. |
-| buildHelp | | `npm run buildHelp` | Print build help command |
-| mathsBuild | `npm run mathsBuild`, `npm run mathsbuild` | Build Maths.re |
-| listeBuild | `npm run listeBuild`, `npm run listebuild` | Build Liste.re |
-| sortBuild | `npm run sortBuild`, `npm run sortbuild` | Build Tri.re |
-| allBuild | `npm run allBuild`, `npm run allbuild` | Run all build commande |
-| startMaths | `npm run startMaths` | Run Maths.re file |
-| startList | `npm run startList` | Run Liste.re file |
-| startSort | `npm run startSort` | Run Tri.re file |
-| start | `npm start` | Run all start commands |
-| clean | `npm run clean` | Remove build files |
-| top | `npm run top` | Run REPL for reason |
-| env | `npm run env` | Show environement setting |
-| whereisocamlmerlin | `npm run whereisocamlmerlin` | Search ocaml merlin utils and print its location |
+| command            | how to run                                 | what is it doing                                        |
+| ------------------ | ------------------------------------------ | ------------------------------------------------------- |
+| postinstall        | `npm run postinstall`                      | Automaticly runed after `npm install` to build all src. |
+| buildHelp          | `npm run buildHelp`                        | Print build help command                                |
+| mathsBuild         | `npm run mathsBuild`, `npm run mathsbuild` | Build Maths.re                                          |
+| listeBuild         | `npm run listeBuild`, `npm run listebuild` | Build Liste.re                                          |
+| sortBuild          | `npm run sortBuild`, `npm run sortbuild`   | Build Tri.re                                            |
+| allBuild           | `npm run allBuild`, `npm run allbuild`     | Run all build commande                                  |
+| startMaths         | `npm run startMaths`                       | Run Maths.re file                                       |
+| startList          | `npm run startList`                        | Run Liste.re file                                       |
+| startSort          | `npm run startSort`                        | Run Tri.re file                                         |
+| start              | `npm start`                                | Run all start commands                                  |
+| clean              | `npm run clean`                            | Remove build files                                      |
+| top                | `npm run top`                              | Run REPL for reason                                     |
+| env                | `npm run env`                              | Show environement setting                               |
+| whereisocamlmerlin | `npm run whereisocamlmerlin`               | Search ocaml merlin utils and print its location        |
 
 ## Add and run files to src.
 
