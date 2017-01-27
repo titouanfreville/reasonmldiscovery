@@ -42,11 +42,10 @@ Those tasks are added in the script session of the `packgage.json` file.
 
 Add build tasks :
 
-- "moduleNameBuild": "eval $(dependencyEnv) && nopam && rebuild -use-ocamlfind -cflag -w -cflag -40 -I src ./src/moduleName.native 2>&1 | berror.native --path-to-refmttype refmttype",
-- "moduleNamebuild": "npm run listeBuild",
-- "allBuild": "previousAllBuild && moduleNameBuild",
-
+- `"moduleNameBuild": "eval $(dependencyEnv) && nopam && rebuild -use-ocamlfind -cflag -w -cflag -40 -I src ./src/moduleName.native 2>&1 | berror.native --path-to-refmttype refmttype",`
+- `"moduleNamebuild": "npm run listeBuild",`
+- `"allBuild": "previousAllBuild && moduleNameBuild",`
 Add start tasks:
 
-- "moduleNameStart": "eval $(dependencyEnv) && ./_build/src/Tri.native",
-- "start": "previousStart && moduleNameStart",
+- `"moduleNameStart": "eval $(dependencyEnv) && ./_build/src/Tri.native",`
+- `"start": "previousStart && moduleNameStart",`
