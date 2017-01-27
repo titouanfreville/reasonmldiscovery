@@ -32,11 +32,14 @@
     }
   },
   "scripts": {
-    "postinstall": "npm run reasonBuild",
+    "postinstall": "npm run mathsBuild",
     "buildHelp": "eval $(dependencyEnv) && nopam && rebuild --help",
-    "reasonBuild": "eval $(dependencyEnv) && nopam && rebuild -use-ocamlfind -cflag -w -cflag -40 -I src ./src/Liste.native 2>&1 | berror.native --path-to-refmttype refmttype",
-    "reasonbuild": "npm run reasonBuild",
-    "start": "eval $(dependencyEnv) && ./_build/src/Liste.native",
+    "mathsBuild": "eval $(dependencyEnv) && nopam && rebuild -use-ocamlfind -cflag -w -cflag -40 -I src ./src/Maths.native 2>&1 | berror.native --path-to-refmttype refmttype",
+    "mathsbuild": "npm run mathsBuild",
+    "listeBuild": "eval $(dependencyEnv) && nopam && rebuild -use-ocamlfind -cflag -w -cflag -40 -I src ./src/Liste.native 2>&1 | berror.native --path-to-refmttype refmttype",
+    "listebuild": "npm run listeBuild",
+    "start": "eval $(dependencyEnv) && ./_build/src/Maths.native",
+    "startList": "eval $(dependencyEnv) && ./_build/src/Liste.native",
     "clean": "rm -r ./_build",
     "top": "eval $(dependencyEnv) && rtop",
     "env": "eval $(dependencyEnv) && env",
